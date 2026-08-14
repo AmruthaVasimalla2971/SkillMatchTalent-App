@@ -154,7 +154,7 @@ if submitted:
         ]
     )
 
-    proba = model.predict_proba(row)[0, 1]
+    proba = float(model.predict_proba(row)[0, 1])
     pred = int(proba >= 0.5)
 
     st.divider()
